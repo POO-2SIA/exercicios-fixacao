@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Bilhete {
     //Por padrão, as variáveis numéricas na classe se inicializam com 0
-    private double saldo;
+    public double saldo;
     //Vamos inicializar a tarifaBase como uma constante de valor 5. E como não queremos que ela apareça no main
     //(não queremos que ela pertença ao objeto) delcaramos ela como static - dessa forma, o atributo não será atribuido
     //ao objeto - ele pertencerá à classe
@@ -56,5 +56,9 @@ public class Bilhete {
         } else {
             return "Saldo insuficiente";
         }
+    }
+
+    public long getNum() {
+        return numBilhete;
     }
 }
