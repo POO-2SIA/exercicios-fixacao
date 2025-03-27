@@ -12,7 +12,7 @@ import static java.lang.Double.parseDouble;
 //Utilizamos o static na hora de importar para indicar que os métodos pertencem à classe, e não a um objeto!
 
 public class Util {
-    static final int N = 2; ;
+    static final int N = 5; ;
     private Bilhete[] bilhetes = new Bilhete[N];
     private int i = 0;
 
@@ -61,6 +61,9 @@ public class Util {
                   break;
                 case 2:
                     listarBilhetes();
+                    break;
+                case 3:
+                    removerBilhete();
                     break;
             }
         } while(op != 4);
@@ -135,6 +138,15 @@ public class Util {
         }
         showMessageDialog(null, "CPF " + cpf + " não encontrado!");
         return -1;
+    }
+
+    private void removerBilhete() {
+        int posicao = pesquisarBilhete();
+        if (posicao != -1) {
+            bilhetes[posicao] = bilhetes[i - 1];
+            showMessageDialog(null, "Bilhete removido com sucesso!");
+            i--;
+        }
     }
 
     //Método para carregar o bilhete -- com valor informado pelo usuário
