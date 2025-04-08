@@ -10,8 +10,8 @@ public class Exercicio {
 
     public void fazerAlgo(int valor) {
         valor++;
-        for(int aux = 3; aux < 6; aux++) {
-            System.out.print(" " + valor);
-        }
+        for(int aux = 3; aux < 6; aux++);
+        System.out.print(" " + valor);
+
     }
 }
